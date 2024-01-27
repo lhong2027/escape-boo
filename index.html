@@ -3,84 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><escape-boo></escape-boo></title>
+    <title>Spooky Adventures</title>
 </head>
 
 <style>
-    *{ margin: 0;padding: 0;}
-    .container {
-        position: relative;
-        height: 100vh; 
-        width: 100vw;
-        overflow: scroll;
-    }
-   
-body{
-    background-color: rgb(0, 0, 0);
-}
-    @font-face {
-        font-family: 'creepster';
-        src: url(Creepster/Creepster-Regular.ttf);}
+* {margin: 0;padding: 0;box-sizing: border-box;}
 
-.heading { display: flex; justify-content: center; align-items: center; height: 1000vh; width: 2000vh; text-align: center; color:yellow; font-family: 'creepster'; font-size: 50px;}
+@font-face { font-family: 'eater'; src: url(/eater/Eater-Regular.ttf);}
 
-.jumpscarebox{
-    width: 400px;
-    height: 400px;
-	background-color: rgb(0, 0, 0);
-	margin: 100px;
-	position: absolute;
-    overflow: hidden; 
-}
-.boo{
-    width: 500px;
-    top: -10px;
-	left: 500px;
-    position: absolute;  
-}
-.jumpscarebox:hover .boo{
-    transform: translatex(-100%); 
-}
+.container { position: relative; height: 100vh; width: 100vw; 
+  text-align: center; padding-top: 50px; }
+
+.border { margin-top: 20px; margin-left: 200px; margin-right: 200px; padding-bottom: 70px; background-color: rgb(0, 0, 0); }
+
+body {background-color: rgb(0, 0, 0);}
+
+.heading {font-size: 25px; font-family: 'eater'; color: rgb(255, 255, 255); padding-bottom: 60px; padding-top: 60px;}
+
+a { color: rgb(169, 0, 65); font-size: 25px; font-family: 'eater'; }
+
 </style>
 
 <body>
-    <div class="container">
-    <div class="heading"><h1 id="beginning">Escape from BOO!
-        <br><span style="font-size: 25px; font-family: 'Times New Roman';">You are trapped in a pitch black maze.<br> Look for an exit without getting caught by it... <em>Good Luck.</em></span></h1></div>
     
-    <p style="font-size: 15px; color: yellow; margin-left: 7600px; margin-bottom: 6000px; text-align: center;">Oh, that must be an exit!<br><img src="assets/maze-exit.jpg" width="200px" height="100px"></p>
-    
-    <div style="position:absolute; top: 800px; left: 700px;"><div class="jumpscarebox">boo1<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 300px; left: 3000px;"><div class="jumpscarebox">boo2<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 5000px; left: 3000px;"><div class="jumpscarebox">boo3<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 7000px; left: 60px;"><div class="jumpscarebox">boo4<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 4000x; left: 1000px;"><div class="jumpscarebox">boo5<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 2000px; left: 2000px;"><div class="jumpscarebox">boo6<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 5800px; left: 5300px;"><div class="jumpscarebox">boo7<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 0px; left: 6000px;"><div class="jumpscarebox">boo8<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 3000px; left: 3600px;"><div class="jumpscarebox">boo9<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 1000px; left: 4000px;"><div class="jumpscarebox">boo10<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 5000px; left: 5000px;"><div class="jumpscarebox">boo11<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 1000px; left: 4000px;"><div class="jumpscarebox">boo12<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 7000px; left: 6000px;"><div class="jumpscarebox">boo13<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 5000px; left: 8200px;"><div class="jumpscarebox">boo14<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 6000px; left: 8000px;"><div class="jumpscarebox">boo15<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 6000px; left: 15000px;"><div class="jumpscarebox">boo16<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 8000px; left: 11000px;"><div class="jumpscarebox">boo17<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 9000px; left: 18000px;"><div class="jumpscarebox">boo18<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 16000px; left: 12000px;"><div class="jumpscarebox">boo19<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 1000px; left: 15000px;"><div class="jumpscarebox">boo20<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 4000px; left: 10000x;"><div class="jumpscarebox">boo21<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 2px; left: 10000px;"><div class="jumpscarebox">boo22<img src="assets/usagi copy.png" class="boo"></div></div>
-    <div style="position:absolute; top: 10000px; left: 14000px;"><div class="jumpscarebox">boo23<img src="assets/usagi copy.png" class="boo"></div></div>
+<div class="container">
+<div class="border">
+   <div class="heading"><h1><span style="font-size: 60px;">Spooky</span><br>Adventures</h1></div>
 
 
-    </div>
 
-    <script>
-        document.querySelector('.container').scrollLeft = document.querySelector('.heading').offsetWidth/2 - window.innerWidth/2;
-        document.querySelector('.container').scrollTop = document.querySelector('.heading').offsetHeight/2  - window.innerHeight/2;
-    </script>
+    <a href="escape-boo.html">Ch 1. Try escaping...</a> <br><br><br>
+    <a href="ghostriddle.html">Ch 2. Guess who?</a> <br><br><br>
+    <a href="search.html">Ch 3. Search!</a> <br><br><br>
+
+</div>
+</div>
+
 
 </body>
 </html>
