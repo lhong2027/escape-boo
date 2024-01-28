@@ -12,33 +12,49 @@
 
 @font-face { font-family: 'pixel-sans'; src:url(Pixelify_Sans/PixelifySans-VariableFont_wght.ttf)}
 
-.container{ position: relative; height: 100vh; width: 100vw;}
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
 
-body { background-color: black; background-image: url(assetss/edited.png);background-repeat: no-repeat; background-size: 100% 100%;}
+.container{ position: relative; height: 100vh;}
 
-.riddle { display: flex; color: yellow; margin-bottom: 10px; justify-content: center; align-items: flex-end; font-family: 'pixel-sans'; font-size: 25px; height: 100vh;}
+body { background-color: black;}
+
+.riddle { color: yellow; margin-bottom: 10px;  font-family: 'pixel-sans'; font-size: 25px; position: fixed; bottom: 0; width: 100vw; text-align: center;}
 
 .box {
-        width: 300px; height: 350px;display: flex; align-items: center;justify-content: center;flex-direction: column; margin: 100px; animation-name: bounce; animation-duration: 1.5s; animation-direction: alternate; animation-iteration-count: infinite; overflow: hidden; animation-timing-function: linear;}
+        width: 300px; height: 350px;display: flex; align-items: center;justify-content: center;flex-direction: column; margin: 100px; animation-name: bounce; animation-duration: 1.5s; animation-direction: alternate; animation-iteration-count: infinite; overflow: hidden; animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);}
 .box2 { width: 300px; height: 350px; display: flex; align-items: center; justify-content: center; flex-direction: column;
-        margin: 100px; animation-name: bounce; animation-duration: 1.5s; animation-direction:alternate-reverse; animation-iteration-count: infinite; overflow: hidden; animation-timing-function: linear;}
+        margin: 100px; animation-name: bounce; animation-duration: 1.5s; animation-direction:alternate-reverse; animation-iteration-count: infinite; overflow: hidden; animation-timing-function:  cubic-bezier(0.83, 0, 0.17, 1);}
 .box3 { width: 300px; height: 350px;display: flex; align-items: center; justify-content: center; flex-direction: column;
-        margin: 100px; animation-name: bounce; animation-duration: 1.5s; animation-direction:alternate; animation-iteration-count: infinite; overflow: hidden; animation-timing-function: linear;}
+        margin: 100px; animation-name: bounce; animation-duration: 1.5s; animation-direction:alternate; animation-iteration-count: infinite; overflow: hidden; animation-timing-function:  cubic-bezier(0.83, 0, 0.17, 1);}
 .box4 {width: 300px; height: 350px;display: flex;align-items: center;justify-content: center;flex-direction: column;
-        margin: 100px; animation-name: bounce; animation-duration: 1.5s; animation-direction:alternate-reverse; animation-iteration-count: infinite; overflow: hidden; animation-timing-function: linear;}
+        margin: 100px; animation-name: bounce; animation-duration: 1.5s; animation-direction:alternate-reverse; animation-iteration-count: infinite; overflow: hidden; animation-timing-function:  cubic-bezier(0.83, 0, 0.17, 1);}
 
 @keyframes bounce {
-			100% {transform: translate(0px, 100px);}}
+	0% {
+		transform: translate(0px, 0px) rotate(-10deg);
+		
+	}
+	100% {
+		transform: translate(0px, 100px) rotate(10deg);
+	}
+}
     
 p { font-family: 'pixel-sans'; color:rgb(255, 255, 172); text-align: center; font-size: 25px;}
 
 .ghost{ width: 350px; height: 350px; background-size: contain; background-position: center; background-repeat: no-repeat;
 background-image: url('assetss/pnghut_ghost-pixel-art-gif-image-technology-cute.png');}
 
-.box:hover .ghost{ background-image: url('/assetss/criminal.png');}
-.box2:hover .ghost{background-image: url('/assetss/baker.png');}
-.box3:hover .ghost{background-image: url('/assetss/customer.png');}
-.box4:hover .ghost{background-image: url('/assetss/walkpast.png');}
+.box:hover .ghost{ background-image: url('assetss/criminal.png');}
+.box2:hover .ghost{background-image: url('assetss/baker.png');}
+.box3:hover .ghost{background-image: url('assetss/customer.png');}
+.box4:hover .ghost{background-image: url('assetss/walkpast.png');}
 
 .hint { 
     width: 100px; height: 100px; color: yellow; font-family: 'pixel-sans';font-size: 20px; margin-top: 20px;}
@@ -53,18 +69,25 @@ background-image: url('assetss/pnghut_ghost-pixel-art-gif-image-technology-cute.
 .position { position: fixed; top: 10px; right: 150px;}
 .position2 { position: fixed; top: 10px; right: 20px;}
 
-
+.ghost-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	position: absolute;
+	top: 0;
+	gap: 1.5vw;
+}
 </style>
 
 <body>
 
 <div class="container"><div class="riddle"><h1 style="padding-bottom: 120px;">A bakery exploded. Who is the criminal?</h1></div> 
 
-<div style="position: absolute; top: 35px; left: 210px; text-align: center;"><div class="box"><div class="ghost"></div></div>
+<div class="ghost-container">
+	<div><div class="box"><div class="ghost"></div></div></div>
+	<div><div class="box2"><div class="ghost"></div></div></div>
+	<div><div class="box3"><div class="ghost"></div></div></div>
+	<div><div class="box4"><div class="ghost"></div></div></div>
 </div>
-<div style="position: absolute; top: 35px; left: 570px; text-align: center;"><div class="box2"><div class="ghost"></div></div></div>
-<div style="position: absolute; top: 35px; left: 930px; text-align: center;"><div class="box3"><div class="ghost"></div></div></div>
-<div style="position: absolute; top: 35px; left: 1290px; text-align: center;"><div class="box4"><div class="ghost"></div></div></div>
 
 
 <div class="position">
@@ -74,6 +97,8 @@ background-image: url('assetss/pnghut_ghost-pixel-art-gif-image-technology-cute.
 <div class="position2">
     <div class="answer">&nbsp;&nbsp;&nbsp;<img src="/assetss/book.png" width="30px" height="30px"><br>Answer</div>
 </div>
+
+<img src="assetss/edited.png" class="background">
 
 </div>
 
