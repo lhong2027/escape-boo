@@ -9,9 +9,17 @@
 <style>
 * {margin: 0;padding: 0;box-sizing: border-box;}
 
+.background { 
+position: fixed;
+top: 0;
+left: 0;
+width: 1950px;
+height: 970px; 
+z-index: -1;}
+
 .container{ position: relative; height: 100vh; width: 100vw; overflow: hidden;}
 
-body { background-color: rgb(0, 0, 0); background-image: url(assetsss/backgroundfrrrr.jpg);background-repeat: no-repeat; background-size: 100% 100%; background-position: center;}
+body { background-color: rgb(0, 0, 0); }
 
 .box { background-image: url(assetsss/boxes.png); width: 305px; height: 300px;}
         .box:hover {transform: translate(-300px, 0px); transition: 1.5s;}
@@ -46,6 +54,8 @@ body { background-color: rgb(0, 0, 0); background-image: url(assetsss/background
 .speech {background-image: url(assetsss/search.png); width: 400px; height: 230px; background-size: 100% 100%; background-repeat: no-repeat;}
     .speech:hover {background-image: url(assetsss/orelse.png); width: 420px; height: 240px; background-size: 100% 100%; background-repeat: no-repeat;}
 
+ 
+
 </style>
 
 <body>
@@ -54,14 +64,16 @@ body { background-color: rgb(0, 0, 0); background-image: url(assetsss/background
     <div style="position: absolute; top: 650px; left: 120px;"><div class="box"></div>
     <div style="position:absolute; top: -400px; left: 610px;"><div class="horizontal-frame"></div>
     <div style="position:absolute; top: -170px; left: 250px;"><div class="small-frame"></div>
-    <div style="position: absolute; top: 520px; left: 765px;"><div class="bottle"></div>
+    <div style="position: absolute; top: 535px; left: 795px;"><div class="bottle"></div>
     <div style="position:absolute; top: 190px; left: -230px;"><div class="scale"></div>
     <div style="position:absolute; top: -367px; left: 10px;"><div class="plant"></div>
-    <div style="position:absolute; top: -190px; left: 200px;"><div class="vase"></div>
-    <div style="position:absolute; top: 265px; left: -1050px;"><div class="lamp"></div>
-    <div style="position:absolute; top: 22px; left: -300px;"><div class="mushroom-bottle"></div>
+    <div style="position:absolute; top: -200px; left: 200px;"><div class="vase"></div>
+    <div style="position:absolute; top: 270px; left: -1050px;"><div class="lamp"></div>
+    <div style="position:absolute; top: 32px; left: -300px;"><div class="mushroom-bottle"></div>
     <div style="position:absolute; top: -700px; left: 1200px;"><div class="spider"></div>
     <div style="position:absolute; top: 820px; left: -890px;"><div class="speech"></div>
+
+  <img src="assetsss/backgroundfrrrr.jpg" class="background">
     
 </div>
 
