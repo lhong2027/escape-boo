@@ -12,14 +12,7 @@
 
 @font-face { font-family: 'pixel-sans'; src:url(Pixelify_Sans/PixelifySans-VariableFont_wght.ttf)}
 
-.background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: -1;
-}
+.background {position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;z-index: -1;}
 
 .container{ position: relative; height: 100vh;}
 
@@ -38,13 +31,8 @@ body { background-color: black;}
 
 @keyframes bounce {
 	0% {
-		transform: translate(0px, 0px) rotate(-10deg);
-		
-	}
-	100% {
-		transform: translate(0px, 100px) rotate(10deg);
-	}
-}
+		transform: translate(0px, 0px) rotate(-10deg);}
+	100% {transform: translate(0px, 100px) rotate(10deg);}}
     
 p { font-family: 'pixel-sans'; color:rgb(255, 255, 172); text-align: center; font-size: 25px;}
 
@@ -73,8 +61,12 @@ background-image: url('assetss/pnghut_ghost-pixel-art-gif-image-technology-cute.
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	position: absolute;
-	top: 0;
-}
+	top: 0;}
+
+::-webkit-scrollbar {width: 0px; height: 10px;}
+	::-webkit-scrollbar-track {background: #000000;}
+	::-webkit-scrollbar-thumb {background: rgb(75, 125, 172);}
+
 </style>
 
 <body>
@@ -88,7 +80,6 @@ background-image: url('assetss/pnghut_ghost-pixel-art-gif-image-technology-cute.
 	<div><div class="box4"><div class="ghost"></div></div></div>
 </div>
 
-
 <div class="position">
     <div class="hint"> <img src="assetss/mag.png" width="30px" height="30px"><br> Hint</div>
 </div>
@@ -98,7 +89,6 @@ background-image: url('assetss/pnghut_ghost-pixel-art-gif-image-technology-cute.
 </div>
 
 <img src="assetss/edited.png" class="background">
-
 </div>
 
 </body>
